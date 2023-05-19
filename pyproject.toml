@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "tcp_stack"
+version = "0.1.0"
+description = ""
+authors = ["Kanyinsola Sagoe <ksagoe@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "working_with_bytes" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "*"
+black = "*"
+flake8-import-order = "*"
+mypy = "*"
+
+[tool.poetry.scripts]
+wwb_solution = "working_with_bytes.apps.wwb_solution:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
